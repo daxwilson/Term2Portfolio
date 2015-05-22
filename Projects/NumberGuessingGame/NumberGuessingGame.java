@@ -16,11 +16,9 @@ public class NumberGuessingGame {
                   if (guess == secretNumber)
                         System.out.println("Excellent! You guessed the number! \nIt took you " + i + " guesses!");
                   else if (guess < secretNumber)
-                        System.out
-                                   .println("Your guess is smaller than the secret number.");
+                        System.out.println("Your guess is smaller than the secret number.");
                   else if (guess > secretNumber)
-                        System.out
-                                   .println("Your guess is greater than the secret number.");
+                        System.out.println("Your guess is greater than the secret number.");
                   System.out.println("Guesses: " + i);
               i++;
             } while (guess != secretNumber);

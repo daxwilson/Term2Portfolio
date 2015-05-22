@@ -1,0 +1,12 @@
+import javax.applet.Applet;
+import java.awt.*;
+
+public class DrawShapes extends Applet{
+  public void paint(Graphics g) {
+    int x1 = 30;
+    int y1 = 30;
+    int x2 = 60;
+    int y2 = 60;
+    g.drawRect(x1,y1,x2,y2);
+  }
+}

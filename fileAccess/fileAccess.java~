@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+
+public class fileAccess {
+  public static void main(String[] args) throws IOException {
+    Scanner keyboard = new Scanner(System.in);
+    String[] question = new String[10];
+    Random random = new Random();  
+    String questions = "";
+    String answer = "";
+    
+    question[0] = "1";
+    question[1] = "2";
+    question[2] = "3";
+    question[3] = "4";
+    question[4] = "5";
+    question[5] = "6";
+    question[6] = "7";
+    question[7] = "8";
+    question[8] = "9";
+    question[9] = "10";
+
+    questions = question[random.nextInt(10)];
+    System.out.println(questions);
+    answer = keyboard.nextLine();
+    
+    File file = new File("output.txt");
+    
+    try {
+        BufferedWriter output = new BufferedWriter(new FileWriter(file));
+        output.write(questions);
+        output.newLine();
+        output.write(answer);
+        output.close();
+      } catch ( IOException e ) {
+         e.printStackTrace();
+      }
+   }
+}

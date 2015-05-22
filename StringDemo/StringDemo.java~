@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class StringDemo{
+  public static void main(String args[]) {
+    Scanner keyboard = new Scanner(System.in);
+    
+    System.out.println("Enter a word to translate: ");
+    String phrase = keyboard.nextLine();
+    for(String pygWord: phrase.split(" ")) {
+      if(pygWord.charAt(0) == 'a' ||
+         pygWord.charAt(0) == 'e' ||
+         pygWord.charAt(0) == 'i' ||
+         pygWord.charAt(0) == 'o' ||
+         pygWord.charAt(0) == 'u') {
+        System.out.print(pygWord + "-way ");
+      } else {
+      System.out.print(pygWord.substring(1) + "-" + pygWord.charAt(0) + "ay ");
+    }
+  }
+}
+}

@@ -1,0 +1,38 @@
+import java.util.Calendar;
+import java.util.Scanner;
+
+public class CalendarDemo {
+
+   public static void main(String[] args) {
+      Scanner keyboard = new Scanner(System.in);
+      int year;
+      int month;
+      int day;
+      
+      Calendar cal = Calendar.getInstance(); 
+      //Date date = cal.getTime();
+      SimpleDateFormat ft = new SimpleDateFormat("MM/dd/yyyy");
+      System.out.println("The current date is : " + cal.getTime());
+      System.out.print("Enter your full birth year (i.e. 1995): ");
+        year = keyboard.nextInt();
+      System.out.print("Enter the number of your birth month in 2 digits (i.e. March = 03): ");
+        month = keyboard.nextInt();
+      System.out.print("Enter the day of your birth in 2 digits (i.e. 22 or 04): ");
+        day = keyboard.nextInt();
+      
+        System.out.println("Day = " + day);
+        System.out.println("Month = " + month);
+        System.out.println("Year = " + year);
+        
+      cal.add(Calendar.DATE, -day);
+      cal.add(Calendar.MONTH, -month);
+      cal.add(Calendar.YEAR, -year);
+      System.out.println(cal.getTime());
+      
+      //HOW TO CHANGE CALENDAR FORMAT??
+        
+
+      
+      //cal.add(Calendar.DATE, 20);
+   }
+}

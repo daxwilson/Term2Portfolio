@@ -6,6 +6,7 @@ public class NumberGuessingGame {
       // Program entry point, each java app must have a main
       public static void main(String[] args) {
             int secretNumber;
+            int i = 1;
             secretNumber = (int) (Math.random() * 999 + 1);           
             Scanner keyboard = new Scanner(System.in);
             int guess;
@@ -13,13 +14,15 @@ public class NumberGuessingGame {
                   System.out.print("Enter a guess (1-1000): ");
                   guess = keyboard.nextInt();
                   if (guess == secretNumber)
-                        System.out.println("Excellent! You guessed the number!");
+                        System.out.println("Excellent! You guessed the number! \nIt took you " + i + " guesses!");
                   else if (guess < secretNumber)
                         System.out
                                    .println("Your guess is smaller than the secret number.");
                   else if (guess > secretNumber)
                         System.out
                                    .println("Your guess is greater than the secret number.");
+                  System.out.println("Guesses: " + i);
+              i++;
             } while (guess != secretNumber);
       }
 }
